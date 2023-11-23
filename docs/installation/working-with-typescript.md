@@ -41,12 +41,16 @@ Running CKEditor&nbsp;5 doesn't differ much when using Typescript compared to th
 Here is an example of the classic editor build initialization:
 
 ```ts
+// Importing the ClassicEditor module from the specified package
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 
+// Retrieving an HTML element with the ID 'editor' from the document
 const editorPlaceholder = document.querySelector( '#editor' ) as HTMLElement;
 
+// Creating a new instance of the ClassicEditor and attaching it to the selected HTML element
 ClassicEditor.create( editorPlaceholder ).catch( error => {
-	console.error( error );
+    // Logging any errors that occur during the creation of the editor
+    console.error( error );
 } );
 ```
 
